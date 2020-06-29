@@ -1,0 +1,1 @@
+This directory contains the necessary script that enables communication between Godot and SDK
