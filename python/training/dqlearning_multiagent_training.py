@@ -170,7 +170,7 @@ class DQNAgent:
 
         X = []
         y = []
-        z = []  # action değerlerini tutabilmek için
+        z = []  # used in custom loss
 
             # Now we need to enumerate our batches
         for index, (current_state, action, reward, new_current_state, done) in enumerate(minibatch):
@@ -181,7 +181,7 @@ class DQNAgent:
 
             else:
 
-                new_q = reward #+ self.gamma * np.max(current_qs_list[index])
+                new_q = reward #+ self.gamma * np.max(current_qs_list[index])  # experimental
 
                 # Update Q value for given state
             current_qs = current_qs_list[index]
