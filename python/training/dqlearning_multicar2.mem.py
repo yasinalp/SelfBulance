@@ -46,9 +46,9 @@ z = []
 model_name0 = "model0final1-nobias-8neurons"
 model_name1 = "model1final1-nobias-8neurons"
 model_name2 = "model2final1-nobias-8neurons"
-load_name0 = "model0final-nobias-8neurons-2M"  # "s3a3gi95arc61218126Adam-10M"
-load_name1 = "model1final-nobias-8neurons-2M"
-load_name2 = "model2final-nobias-8neurons-2M"
+load_name0 = ""  # "s3a3gi95arc61218126Adam-10M"
+load_name1 = ""
+load_name2 = ""
 min_rewards = collections.deque(maxlen=1000)
 max_rewards = collections.deque(maxlen=1000)
 average_rewards = collections.deque(maxlen=1000)
