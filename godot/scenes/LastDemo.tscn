@@ -1,0 +1,427 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://assets/stop.png" type="Texture" id=1]
+[ext_resource path="res://assets/kenney_racingpack_updated/PNG/Objects/tires_white.png" type="Texture" id=2]
+[ext_resource path="res://assets/kenney_racingpack_updated/PNG/Tiles/offroad.png" type="Texture" id=3]
+[ext_resource path="res://assets/kenney_racingpack_updated/PNG/Objects/tree_large.png" type="Texture" id=4]
+[ext_resource path="res://assets/kenney_racingpack_updated/PNG/Objects/tires_red_alt.png" type="Texture" id=5]
+[ext_resource path="res://assets/kenney_racingpack_updated/PNG/Objects/tires_red.png" type="Texture" id=6]
+[ext_resource path="res://assets/kenney_racingpack_updated/PNG/Characters/character_black_white.png" type="Texture" id=7]
+[ext_resource path="res://assets/kenney_racingpack_updated/PNG/Cars/car_green_2.png" type="Texture" id=8]
+[ext_resource path="res://assets/kenney_racingpack_updated/PNG/Objects/tires_white_alt.png" type="Texture" id=9]
+[ext_resource path="res://resources/asphalt_road.tres" type="TileSet" id=10]
+[ext_resource path="res://assets/kenney_racingpack_updated/PNG/Objects/barrel_red.png" type="Texture" id=11]
+[ext_resource path="res://scripts/last_demo.gd" type="Script" id=12]
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 11.0
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24, 5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 38, 5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 58, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 25, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 45, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 100, 10 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 104, 10 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 118, 10 )
+
+[node name="LastDemo" type="Node2D"]
+script = ExtResource( 12 )
+
+[node name="Temporary" type="Node" parent="."]
+
+[node name="Node" type="Node" parent="Temporary"]
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+visible = false
+
+[node name="TileMap" type="TileMap" parent="Navigation2D"]
+tile_set = ExtResource( 10 )
+cell_size = Vector2( 128, 128 )
+collision_layer = 16
+format = 1
+tile_data = PoolIntArray( -131070, -2147483646, 0, -131069, -2147483642, 0, -131068, -2147483642, 0, -131067, -2147483642, 0, -131066, -2147483642, 0, -131065, -2147483642, 0, -131064, -2147483642, 0, -131063, -2147483642, 0, -131062, -2147483642, 0, -131061, -2147483642, 0, -131060, -2147483642, 0, -131059, -2147483642, 0, -131058, -2147483642, 0, -131057, -2147483642, 0, -131056, 536870914, 0, -65534, 1073741830, 0, -65533, 536870919, 0, -65532, -2147483639, 0, -65531, -536870906, 0, -65530, -536870906, 0, -65529, -536870906, 0, -65528, 536870921, 0, -65527, 536870919, 0, -65526, -2147483639, 0, -65525, -536870906, 0, -65524, -536870906, 0, -65523, -536870906, 0, -65522, 536870921, 0, -65521, 536870919, 0, -65520, 536870918, 0, 2, 1073741830, 0, 3, 536870919, 0, 4, 1610612742, 0, 8, 1073741830, 0, 9, 536870919, 0, 10, 1610612742, 0, 14, 1073741830, 0, 15, 536870919, 0, 16, 1610612742, 0, 65538, 1073741830, 0, 65539, 536870919, 0, 65540, 1610612742, 0, 65544, 1073741830, 0, 65545, 536870919, 0, 65546, 1610612742, 0, 65550, 1073741830, 0, 65551, 536870919, 0, 65552, 1610612742, 0, 131074, 1073741830, 0, 131075, 536870919, 0, 131076, 1610612742, 0, 131078, -2147483646, 0, 131079, -2147483642, 0, 131080, -536870903, 0, 131081, 536870919, 0, 131082, 1610612742, 0, 131086, 1073741830, 0, 131087, 536870919, 0, 131088, 1610612742, 0, 196610, 1073741830, 0, 196611, 536870919, 0, 196612, 1610612742, 0, 196614, 1073741830, 0, 196615, -2147483639, 0, 196616, 536870921, 0, 196617, 536870919, 0, 196618, 1610612742, 0, 196622, 1073741830, 0, 196623, 536870919, 0, 196624, 1610612742, 0, 262146, 1073741830, 0, 262147, 536870919, 0, 262148, 1073741833, 0, 262149, -2147483642, 0, 262150, -536870903, 0, 262151, 536870918, 0, 262152, 1073741830, 0, 262153, 536870919, 0, 262154, 1610612742, 0, 262156, -2147483646, 0, 262157, -2147483642, 0, 262158, -536870903, 0, 262159, 536870919, 0, 262160, 1610612742, 0, 327682, 1073741830, 0, 327683, 536870919, 0, 327684, -2147483639, 0, 327685, -536870906, 0, 327686, -536870906, 0, 327687, -536870910, 0, 327688, 1073741830, 0, 327689, 536870919, 0, 327690, 1610612742, 0, 327692, 1073741830, 0, 327693, -2147483639, 0, 327694, 536870921, 0, 327695, 536870919, 0, 327696, 1610612742, 0, 393218, 1073741830, 0, 393219, 536870919, 0, 393220, 1610612742, 0, 393224, 1073741830, 0, 393225, 536870919, 0, 393226, 1610612742, 0, 393228, 1073741830, 0, 393229, 536870918, 0, 393230, 1073741830, 0, 393231, 536870919, 0, 393232, 1610612742, 0, 458754, 1073741830, 0, 458755, 536870919, 0, 458756, 1610612742, 0, 458760, 1073741830, 0, 458761, 536870919, 0, 458762, 1610612742, 0, 458764, 1073741830, 0, 458765, 536870918, 0, 458766, 1073741830, 0, 458767, 536870919, 0, 458768, 1610612742, 0, 524290, 1073741830, 0, 524291, 536870919, 0, 524292, 1610612742, 0, 524296, 1073741830, 0, 524297, 536870919, 0, 524298, 1073741833, 0, 524299, -2147483642, 0, 524300, -536870903, 0, 524301, 536870918, 0, 524302, 1073741830, 0, 524303, 536870919, 0, 524304, 1610612742, 0, 589826, 1073741830, 0, 589827, 536870919, 0, 589828, 1610612742, 0, 589832, 1073741830, 0, 589833, 536870919, 0, 589834, -2147483639, 0, 589835, -536870906, 0, 589836, -536870906, 0, 589837, -536870910, 0, 589838, 1073741830, 0, 589839, 536870919, 0, 589840, 1610612742, 0, 655362, 1073741830, 0, 655363, 536870919, 0, 655364, 1610612742, 0, 655368, 1073741830, 0, 655369, 536870919, 0, 655370, 1610612742, 0, 655374, 1073741830, 0, 655375, 536870919, 0, 655376, 1610612742, 0, 720898, 1073741830, 0, 720899, 536870919, 0, 720900, 1610612742, 0, 720904, 1073741830, 0, 720905, 536870919, 0, 720906, 1610612742, 0, 720910, 1073741830, 0, 720911, 536870919, 0, 720912, 1610612742, 0, 786434, 1073741830, 0, 786435, 536870919, 0, 786436, 1610612742, 0, 786440, 1073741830, 0, 786441, 536870919, 0, 786442, 536870918, 0, 786446, 1073741830, 0, 786447, 536870919, 0, 786448, 1610612742, 0, 851970, 1073741830, 0, 851971, 536870919, 0, 851972, 1073741833, 0, 851973, -2147483642, 0, 851974, -2147483642, 0, 851975, -2147483642, 0, 851976, -536870903, 0, 851977, 536870919, 0, 851978, 1073741833, 0, 851979, -2147483642, 0, 851980, -2147483642, 0, 851981, -2147483642, 0, 851982, -536870903, 0, 851983, 536870919, 0, 851984, 536870918, 0, 917506, 1073741826, 0, 917507, -536870906, 0, 917508, -536870906, 0, 917509, -536870906, 0, 917510, -536870906, 0, 917511, -536870906, 0, 917512, -536870906, 0, 917513, -536870906, 0, 917514, -536870906, 0, 917515, -536870906, 0, 917516, -536870906, 0, 917517, -536870906, 0, 917518, -536870906, 0, 917519, -536870906, 0, 917520, -536870910, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 96, 112 )
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
+[node name="ObstacleController" type="Node2D" parent="."]
+position = Vector2( 28, 40 )
+rotation = 7.85397
+
+[node name="RayLeft" type="RayCast2D" parent="ObstacleController"]
+position = Vector2( 12, -8 )
+enabled = true
+cast_to = Vector2( 150, 0 )
+collision_mask = 8
+collide_with_areas = true
+
+[node name="RayForward" type="RayCast2D" parent="ObstacleController"]
+position = Vector2( 12, 0 )
+enabled = true
+cast_to = Vector2( 150, 0 )
+collision_mask = 8
+collide_with_areas = true
+
+[node name="RayRight" type="RayCast2D" parent="ObstacleController"]
+position = Vector2( 12, 8 )
+enabled = true
+cast_to = Vector2( 150, 0 )
+collision_mask = 8
+collide_with_areas = true
+
+[node name="Agent" type="Node2D" parent="."]
+position = Vector2( 92, 68 )
+
+[node name="Sprite" type="Sprite" parent="Agent"]
+scale = Vector2( 0.236, 0.236 )
+z_index = 3
+texture = ExtResource( 8 )
+
+[node name="Target" type="Sprite" parent="."]
+position = Vector2( 28, 156 )
+scale = Vector2( 0.1, 0.1 )
+z_index = 2
+texture = ExtResource( 1 )
+
+[node name="Obstacle" type="Node2D" parent="."]
+position = Vector2( 96, 112 )
+
+[node name="Sprite" type="Sprite" parent="Obstacle"]
+scale = Vector2( 0.375, 0.375 )
+texture = ExtResource( 11 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle/Area2D"]
+shape = SubResource( 10 )
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = 1
+points = PoolVector2Array( 0, 0, 100, 100 )
+width = 1.0
+default_color = Color( 0.129412, 0.858824, 0.27451, 1 )
+texture_mode = 458761
+
+[node name="Block" type="Sprite" parent="."]
+visible = false
+position = Vector2( 2622.7, 565.97 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Block"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block/StaticBody2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
+modulate = Color( 0.662745, 0.960784, 0.509804, 0.443137 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -104.0
+margin_right = 104.0
+margin_bottom = 56.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="left" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 28, 28 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[node name="Prev" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+margin_left = 38.0
+margin_right = 66.0
+margin_bottom = 28.0
+grow_horizontal = 2
+rect_min_size = Vector2( 28, 28 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="Current" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+margin_left = 76.0
+margin_right = 132.0
+margin_bottom = 56.0
+grow_horizontal = 2
+rect_min_size = Vector2( 56, 56 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="Next" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+margin_left = 142.0
+margin_right = 170.0
+margin_bottom = 28.0
+grow_horizontal = 2
+rect_min_size = Vector2( 28, 28 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="right" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
+margin_left = 180.0
+margin_right = 208.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 28, 28 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="RoadNodes" type="Node2D" parent="."]
+
+[node name="Position2D1" type="Position2D" parent="RoadNodes"]
+position = Vector2( 28, 40 )
+
+[node name="Position2D2" type="Position2D" parent="RoadNodes"]
+position = Vector2( 28, 116 )
+
+[node name="Position2D3" type="Position2D" parent="RoadNodes"]
+position = Vector2( 28, 180 )
+
+[node name="Position2D4" type="Position2D" parent="RoadNodes"]
+position = Vector2( 156, 180 )
+
+[node name="Position2D5" type="Position2D" parent="RoadNodes"]
+position = Vector2( 156, 116 )
+
+[node name="Position2D6" type="Position2D" parent="RoadNodes"]
+position = Vector2( 156, 68 )
+
+[node name="Position2D8" type="Position2D" parent="RoadNodes"]
+position = Vector2( 88, 68 )
+
+[node name="Position2D10" type="Position2D" parent="RoadNodes"]
+position = Vector2( 88, 40 )
+
+[node name="ConnectionController" type="RayCast2D" parent="."]
+position = Vector2( 141.285, 342.343 )
+rotation = 1.5708
+enabled = true
+exclude_parent = false
+cast_to = Vector2( 100, 0 )
+collision_mask = 16
+collide_with_areas = true
+
+[node name="CollisionFinder" type="Sprite" parent="."]
+visible = false
+position = Vector2( 141.285, 342.343 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="Path2D" type="Path2D" parent="."]
+modulate = Color( 1, 0, 0.960784, 1 )
+self_modulate = Color( 1, 0, 0.960784, 1 )
+z_index = 2
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+modulate = Color( 1, 0, 0, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+z_index = 2
+loop = false
+
+[node name="path_point" type="Position2D" parent="Path2D/PathFollow2D"]
+
+[node name="LerpedDir" type="Line2D" parent="."]
+position = Vector2( -896, -1184 )
+points = PoolVector2Array( 1024, 1792 )
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="left" type="Line2D" parent="Obstacles"]
+position = Vector2( 58, 50 )
+rotation = 1.5708
+points = PoolVector2Array( 0, 0, 38, 0 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/left"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/left/StaticBody2D"]
+position = Vector2( 19, 0 )
+shape = SubResource( 2 )
+
+[node name="top" type="Line2D" parent="Obstacles"]
+position = Vector2( 58, 88 )
+points = PoolVector2Array( 0, 0, 66, 0 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/top"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/top/StaticBody2D"]
+position = Vector2( 33, 0 )
+shape = SubResource( 3 )
+
+[node name="bottom" type="Line2D" parent="Obstacles"]
+position = Vector2( 58, 150 )
+points = PoolVector2Array( 0, 0, 66, 0 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacles/bottom"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/bottom/StaticBody2D"]
+position = Vector2( 33, 0 )
+shape = SubResource( 3 )
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Topside1" type="Line2D" parent="Walls"]
+points = PoolVector2Array( 0, 0, 116, 0 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls/Topside1"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Topside1/StaticBody2D"]
+position = Vector2( 58, 0 )
+shape = SubResource( 4 )
+
+[node name="Rightside1" type="Line2D" parent="Walls"]
+position = Vector2( 116, 0 )
+rotation = 1.5708
+points = PoolVector2Array( 0, 0, 29, 0 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls/Rightside1"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Rightside1/StaticBody2D"]
+position = Vector2( 15, 0 )
+shape = SubResource( 5 )
+
+[node name="Topside2" type="Line2D" parent="Walls"]
+position = Vector2( 187, 29 )
+rotation = -3.14159
+points = PoolVector2Array( 0, 0, 70, 0 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls/Topside2"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Topside2/StaticBody2D"]
+position = Vector2( 35, 0 )
+shape = SubResource( 6 )
+
+[node name="Rightside2" type="Line2D" parent="Walls"]
+position = Vector2( 187, 217 )
+rotation = -1.5708
+points = PoolVector2Array( 0, 0, 188, 0 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls/Rightside2"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Rightside2/StaticBody2D"]
+position = Vector2( 94, 0 )
+shape = SubResource( 7 )
+
+[node name="Bottomside" type="Line2D" parent="Walls"]
+position = Vector2( 0, 217 )
+points = PoolVector2Array( 0, 0, 186, 0 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls/Bottomside"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Bottomside/StaticBody2D"]
+position = Vector2( 93, 0 )
+shape = SubResource( 8 )
+
+[node name="Leftside" type="Line2D" parent="Walls"]
+rotation = 1.5708
+points = PoolVector2Array( 0, 0, 216, 0 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls/Leftside"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Leftside/StaticBody2D"]
+position = Vector2( 108, 0 )
+shape = SubResource( 9 )
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/right" to="." method="_on_right_pressed"]
