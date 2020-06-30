@@ -10,4 +10,4 @@ Agent receives these directions and follow that path whereas collision avoidance
 Deep neural network, sensor handler and motor driver logic is implemented in PL part of Zedboard in order to reduce energy consumption and latency.
 PS part of Zedboard is responsible for management of data flow between distance sensor, neural network and motor driver IP.
 
-![Block Diagram](/design_1.pdf)
+![Block Diagram](/block_design.png)
