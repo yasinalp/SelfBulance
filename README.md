@@ -1,4 +1,4 @@
-# SelfBulance
+# SelfBulance - xohw20_205
 Xilinx Open Hardware Contest Project
 
 This project aims that a pre-trained agent that is able to receive route info from where the agent is to target location and follow the path. 
