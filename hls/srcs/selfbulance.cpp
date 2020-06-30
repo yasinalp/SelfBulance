@@ -1,8 +1,8 @@
 #include "forward_propagation.h"
 #include "ap_int.h"
 #include <stdio.h>
-#include "selfbulance_dense_10_weights0.h"
-#include "selfbulance_dense_9_weights0.h"
+#include "selfbulance_output_weights0.h"
+#include "selfbulance_hidden_weights0.h"
 #include <stdio.h>
 
 #define inputsize 3
